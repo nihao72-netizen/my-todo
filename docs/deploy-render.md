@@ -41,13 +41,13 @@ DB는 이미 Supabase(클라우드)에 있으므로, Render에는 서버 코드�
 
 ## 배포 후 확인 방법
 
-1. 접속 주소(`https://my-todo-xxxx.onrender.com`)를 브라우저로 열면 로그인 화면이 나온다.
-2. `https://my-todo-xxxx.onrender.com/api/config`를 열면 `{"authRequired":true}`가 보인다.
+1. 접속 주소(`https://my-todo-e7ph.onrender.com`)를 브라우저로 열면 로그인 화면이 나온다.
+2. `https://my-todo-e7ph.onrender.com/api/config`를 열면 `{"authRequired":true}`가 보인다.
 3. 테스트 계정으로 로그인해 할 일을 추가하고, Supabase Table Editor의 `todos`에 행이 생기는지 본다.
 4. 내 컴퓨터에서 배포된 서버를 대상으로 RLS 확인을 실행한다.
 
    ```bash
-   BASE_URL=https://my-todo-xxxx.onrender.com npm run verify:rls
+   BASE_URL=https://my-todo-e7ph.onrender.com npm run verify:rls
    ```
 
 ## 알아 둘 점

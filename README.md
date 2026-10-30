@@ -3,6 +3,8 @@
 카테고리(공부 / 업무 / 개인)와 마감일로 할 일을 관리하는 웹 애플리케이션입니다.
 요구사항은 [PRD.md](PRD.md)를 참고하세요.
 
+**배포 주소:** <https://my-todo-e7ph.onrender.com> (Render 무료 요금제라 처음 접속 시 깨어나는 데 1분 정도 걸릴 수 있습니다)
+
 - **길 A:** 내 컴퓨터의 SQLite 파일(`todo.db`)에 저장, 로그인 없음
 - **길 B:** Supabase(PostgreSQL)에 저장, Supabase Auth 로그인 + RLS로 내 할 일만 접근
 
@@ -146,6 +148,10 @@ DB를 부르는 코드는 모두 `server/` 아래에 있고, 브라우저에서 
 ## 배포
 
 Render에 백엔드를 올리는 데 필요한 준비물은 [docs/deploy-render.md](docs/deploy-render.md)에 정리했다.
+
+- 배포 주소: <https://my-todo-e7ph.onrender.com> (Blueprint `render.yaml`로 생성, Free · Singapore)
+- 배포 후 확인 (2026-10-30): `/api/config` → `{"authRequired":true}`, `http://` 접속은 `https://`로 이동,
+  `BASE_URL=https://my-todo-e7ph.onrender.com npm run verify:rls` 13개 항목 모두 통과
 
 ## 폴더 구조
 
